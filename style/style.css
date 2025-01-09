@@ -1,5 +1,70 @@
+/* RESET */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+
+/* TIPOGRAPHY */
+* {
+    font-family: "Edu TAS Beginner", serif;
+}
+
+
+/* GENERAL */
+.img-fluid {
+    padding: 20px;
+}
+
+
+/* HEADER */
+header {
+    background-image: url("/img/wall.png");
+}
+
+header > h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 60px;
+    text-align: center;
+    padding: 40px;
+}
+
+
+/* MAIN */
+body {
+    background-image: url("/img/cork.png");
+}
+
+.container {
+    max-width: 940px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: calc(100%/3 - 40px);
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.pin {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50% -20%;
+}
+
+.card > img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+label, p {
+    margin-top: 15px;
 }
