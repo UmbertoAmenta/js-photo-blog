@@ -65,6 +65,6 @@ body {
     object-fit: cover;
 }
 
-label, p {
+.card p {
     margin-top: 15px;
 }
