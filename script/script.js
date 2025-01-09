@@ -1,5 +1,6 @@
 // DOM ELEMENTS
 const boardDom = document.getElementById("board")
+const cardDom = document.querySelector(".card")
 
 // FUNCTIONS
 
@@ -22,8 +23,11 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
                 <p>${photo.title}</p>
             </div>
         `
-    });
+    })
 })
 
 
 // EVENTS
+// cardDom.addEventListener("click", function () {
+//     cardDom.classList.add("clicked")
+// })

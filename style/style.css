@@ -50,6 +50,7 @@ body {
     margin: 10px;
     padding: 20px;
     background-color: #fff;
+    box-shadow: 3px 5px 3px rgb(14, 14, 14);
 }
 
 .pin {
@@ -68,6 +69,27 @@ body {
 .card p {
     margin-top: 5px;
 }
+
+
+/* EFFECTS */
+/* hover */
+.card:hover {
+    position: relative;
+    z-index: 5;
+    transform: scale(1.1);
+    rotate: 5deg;
+    transition: 0.3s;
+}
+
+.card:hover .pin {
+    display: none;
+}
+
+/* click */
+.clicked {
+    transform: scale(3);
+}
+
 
 /* MEDIA QUERY */
 @media screen and (max-width: 800px) {
@@ -91,6 +113,10 @@ body {
 @media screen and (max-width: 250px) {
     header > h1 {
         font-size: 25px;
+    }
+
+    .container {
+        max-width: 200px;
     }
 
     .card {
