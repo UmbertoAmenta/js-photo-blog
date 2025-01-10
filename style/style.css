@@ -17,7 +17,8 @@
     padding: 20px;
 }
 
-.hidden {
+.hidden,
+.card:hover .pin {
     display: none;
 }
 
@@ -79,6 +80,9 @@ main {
     margin-top: 5px;
 }
 
+.card p::first-letter {
+    text-transform: uppercase;
+}
 
 #overlay {
     position: fixed;
@@ -102,7 +106,6 @@ main {
     cursor: pointer;
 }
 
-
 #overlay > img {
     position: absolute;
     top: 25%;
@@ -112,10 +115,20 @@ main {
     aspect-ratio: 1 / 1;
 }
 
+#overlay > p {
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    translate: -50%;
+    color: white;
+    font-size: 60px;
+}
+
 
 /* EFFECTS */
 /* hover */
-.card:hover {
+.card:hover,
+.card-clicked {
     position: relative;
     z-index: 5;
     transform: scale(1.1);
@@ -124,8 +137,9 @@ main {
     cursor: pointer;
 }
 
-.card:hover .pin {
-    display: none;
+/* click */
+.shadow {
+    opacity: 0;
 }
 
 
@@ -134,9 +148,11 @@ main {
     .container {
         max-width: 600px;
     }
+
     .card {
         width: calc(100%/2 - 20px);
     }
+
     #overlay > img {
         max-width: 250px;
     }
@@ -146,13 +162,16 @@ main {
     .container {
         max-width: 300px;
     }
+
     .card {
         width: calc(100% - 20px);
     }
+
     #overlay > #btn {
         font-size: 12px;
         padding: 3px;
     }
+
     #overlay > img {
         max-width: 150px;
     }
