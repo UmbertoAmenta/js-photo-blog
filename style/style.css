@@ -17,6 +17,9 @@
     padding: 20px;
 }
 
+.hidden {
+    display: none;
+}
 
 /* HEADER */
 header {
@@ -28,13 +31,17 @@ header > h1 {
     font-weight: 700;
     font-size: 40px;
     text-align: center;
-    padding: 10px;
+    padding: 3px;
 }
 
 
 /* MAIN */
 body {
     background-image: url("/img/cork.png");
+}
+
+main {
+    position: relative;
 }
 
 .container {
@@ -71,6 +78,38 @@ body {
 }
 
 
+.overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.overlay > button {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    translate: -50%;
+    padding: 5px;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+}
+
+
+.overlay > img {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    translate: -50%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+}
+
+
 /* EFFECTS */
 /* hover */
 .card:hover {
@@ -79,16 +118,11 @@ body {
     transform: scale(1.1);
     rotate: 5deg;
     transition: 0.3s;
-}
-
-.card:hover .pin {
-    display: none;
+    box-shadow: 6px 8px 6px rgb(14, 14, 14);
+    cursor: pointer;
 }
 
 /* click */
-.clicked {
-    transform: scale(3);
-}
 
 
 /* MEDIA QUERY */
@@ -99,6 +133,9 @@ body {
     .card {
         width: calc(100%/2 - 20px);
     }
+    .overlay > img {
+        max-width: 250px;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -108,11 +145,22 @@ body {
     .card {
         width: calc(100% - 20px);
     }
+    .overlay > button {
+        font-size: 12px;
+        padding: 3px;
+    }
+    .overlay > img {
+        max-width: 150px;
+    }
 }
 
 @media screen and (max-width: 250px) {
     header > h1 {
         font-size: 25px;
+    }
+
+    main {
+        font-size: 12px;
     }
 
     .container {
@@ -121,6 +169,9 @@ body {
 
     .card {
         padding: 10px;
-        font-size: 12px;
+    }
+
+    .overlay > img {
+        max-width: 100px;
     }
 }
