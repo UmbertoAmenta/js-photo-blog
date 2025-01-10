@@ -27,7 +27,6 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
         const pinDom = cardDom.querySelector(".pin")
 
         // x aggiunta titolo
-        console.log(cardDom)
         const titleOverlayDom = cardDom.querySelector("p").innerHTML
 
         cardDom.addEventListener("click", function () {
@@ -40,8 +39,7 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
             pinDom.classList.add("hidden")
 
             // x aggiunta titolo
-            console.log(cardDom.querySelector("p"))
-            console.log(titleOverlayDom)
+            hoverDom.querySelector("p").innerHTML = titleOverlayDom
 
             // cardDom.querySelector("div + img").classList.add("shadow")
         })
