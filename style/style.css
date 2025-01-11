@@ -105,6 +105,7 @@ main {
     border-radius: 50%;
     aspect-ratio: 1 / 1;
     cursor: pointer;
+    max-height: 20vh;
 }
 
 #overlay > img {
@@ -114,6 +115,7 @@ main {
     translate: -50%;
     max-width: 400px;
     aspect-ratio: 1 / 1;
+    max-height: 60vh;
 }
 
 #overlay > p {
@@ -157,6 +159,10 @@ main {
     #overlay > img {
         max-width: 250px;
     }
+
+    #overlay > p {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -176,6 +182,11 @@ main {
     #overlay > img {
         max-width: 150px;
     }
+
+    #overlay > p {
+        font-size: 14px;
+    }
+
 }
 
 @media screen and (max-width: 250px) {
